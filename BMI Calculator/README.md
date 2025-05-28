@@ -59,7 +59,7 @@ BMI in Metric System: 21.13
 
 ## 👩🏽‍💻 Author
 
-Developed by Erica Brooks as part of practice for the **Amazon Junior Software Developer Certificate** on Coursera.
+Developed by Erica Brooks as part of practice for the Amazon Junior Software Developer Certificate on Coursera.
 
 ---
 

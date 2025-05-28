@@ -34,20 +34,20 @@ public class CoffeeMachineMain {
                     System.out.print("How many servings would you like? (a number please): ");
                     int numberOfShots = keyboard.nextInt();
 
-                    // TODO 8: Create an object of Espresso class using the parameterized constructor
-                    // TODO 8: Pass the espressoName, espressoRoast, espressoPrice, and numberOfShots as arguments in the correct order
+                    // object of Espresso class using the parameterized constructor
+                    // Pass the espressoName, espressoRoast, espressoPrice, and numberOfShots as arguments in the correct order
                     Espresso myEspresso = new Espresso(espressoName, espressoRoast, espressoPrice, numberOfShots);
 
-                    // TODO 9: Call the grindBeans() method on the Espresso object
+                    // Call the grindBeans() method on the Espresso object
                     myEspresso.grindBeans();
 
-                    // TODO 10: Call the brewCoffee() method on the Espresso object
+                    // Call the brewCoffee() method on the Espresso object
                     myEspresso.brewCoffee();
 
-                    // TODO 11: Call the printInfo() method on the Espresso object
+                    // Call the printInfo() method on the Espresso object
                     myEspresso.printInfo();
 
-                    // TODO 12: Call the printEspressoDetails method on the Espresso object
+                    // Call the printEspressoDetails method on the Espresso object
                     myEspresso.printEspressoDetails();
 
                     break;
@@ -78,20 +78,20 @@ public class CoffeeMachineMain {
                         syrupFlavor = keyboard.next();
                     }
 
-                    // TODO 20: Create an object of Latte class using the parameterized constructor
-                    // TODO 20: Pass the latteName, latteRoast, lattePrice, milkType, and syrupFlavor as arguments in the correct order
+                    // object of Latte class using the parameterized constructor
+                    // Pass the latteName, latteRoast, lattePrice, milkType, and syrupFlavor as arguments in the correct order
                     Latte myLatte = new Latte(latteName, latteRoast, lattePrice, milkType, syrupFlavor);
 
-                    // TODO 21: Call the grindBeans() method on the Latte object
+                    // Call the grindBeans() method on the Latte object
                     myLatte.grindBeans();
 
-                    // TODO 22: Call the brewCoffee() method on the Latte object
+                    // Call the brewCoffee() method on the Latte object
                     myLatte.brewCoffee();
 
-                    // TODO 23: Call the printInfo() method on the Latte object
+                    // Call the printInfo() method on the Latte object
                     myLatte.printInfo();
 
-                    // TODO 24: Call the printLatteDetails() method on the Latte object
+                    // Call the printLatteDetails() method on the Latte object
                     myLatte.printLatteDetails();
 
                     break;

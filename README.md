@@ -66,8 +66,11 @@ The capstone combines all prior skills into a full-stack application or system, 
 
 4. Check out the code, comments, and any README files for explanations
 
-👩🏽‍💻 Author
-Developed by Erica Brooks, a self-driven learner exploring software development through the Amazon + Coursera training pathway.
+---
 
-📬 Feedback & Contributions
+## 💻 Author
+Developed by Erica Brooks as part of practice for the Amazon Junior Software Developer Certificate on Coursera.
+
+---
+## 📬 Feedback & Contributions
 This repository is a work-in-progress learning portfolio. Suggestions, corrections, and ideas are always welcome — feel free to open an issue or pull request.

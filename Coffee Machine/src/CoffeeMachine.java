@@ -1,11 +1,14 @@
 import java.util.Scanner;
 
-public class CoffeeMachineMain {
+public class CoffeeMachine {
 
     public static void main(String[] args) {
 
         // Create a Scanner object to read input
         Scanner keyboard = new Scanner(System.in);
+
+        // Object of CoffeeMaker Class
+        CoffeeMaker cafeCoffeeMaker = new CoffeeMaker();
 
         while (true) {
             System.out.println("\nWelcome to the Coffee Machine!");
@@ -34,20 +37,27 @@ public class CoffeeMachineMain {
                     System.out.print("How many servings would you like? (a number please): ");
                     int numberOfShots = keyboard.nextInt();
 
-                    // object of Espresso class using the parameterized constructor
-                    // Pass the espressoName, espressoRoast, espressoPrice, and numberOfShots as arguments in the correct order
-                    Espresso myEspresso = new Espresso(espressoName, espressoRoast, espressoPrice, numberOfShots);
+                    // TODO 8: declare the myEspresso object before the try block and set it to null.
+                    Espresso myEspresso = null;
 
-                    // Call the grindBeans() method on the Espresso object
+                    // TODO 7: surround the myEspresso object with a try-catch block to handle the ArithmeticException.
+                    try {
+                        myEspresso = new Espresso(espressoName, espressoRoast, espressoPrice, numberOfShots);
+                    } catch (ArithmeticException e) {
+                        // TODO 9: inside the catch block, ask the user to enter number of shots and store it in numberOfShots
+                        // Ask the user for the number of shots and store it in numberOfShots
+                        System.out.print("How many servings would you like? (a number please): ");
+                        numberOfShots = keyboard.nextInt();
+                    } finally { // TODO 10: add a finally block, and initialize the myEspresso object again
+                        myEspresso = new Espresso(espressoName, espressoRoast, espressoPrice, numberOfShots);
+                    }
+
                     myEspresso.grindBeans();
 
-                    // Call the brewCoffee() method on the Espresso object
                     myEspresso.brewCoffee();
 
-                    // Call the printInfo() method on the Espresso object
                     myEspresso.printInfo();
 
-                    // Call the printEspressoDetails method on the Espresso object
                     myEspresso.printEspressoDetails();
 
                     break;
@@ -73,25 +83,32 @@ public class CoffeeMachineMain {
 
                     String syrupFlavor = "no";
                     // if syrupWanted is yes, Ask the user for the syrup flavor and store it in syrupFlavor
-                    if(syrupWanted.equals("yes")){
+                    if (syrupWanted.equals("yes")) {
                         System.out.print("Which flavor would you like? (vanilla, caramel, hazelnut): ");
                         syrupFlavor = keyboard.next();
                     }
 
-                    // object of Latte class using the parameterized constructor
-                    // Pass the latteName, latteRoast, lattePrice, milkType, and syrupFlavor as arguments in the correct order
-                    Latte myLatte = new Latte(latteName, latteRoast, lattePrice, milkType, syrupFlavor);
+                    // TODO 14: declare the myLatte object before the try block and set it to null.
+                    Latte myLatte = null;
 
-                    // Call the grindBeans() method on the Latte object
+                    // TODO 13: surround the myLatte object with a try-catch block to handle the IllegalArgumentException.
+                    try {
+                        myLatte = new Latte(latteName, latteRoast, lattePrice, milkType, syrupFlavor);
+                    } catch (IllegalArgumentException e) {
+                        // TODO 15: inside the catch block, ask the user to enter milkType again
+                        // Ask the user for the milk type and store it in milkType
+                        System.out.print("What milk type would you like? (whole, skim, almond, oat): ");
+                        milkType = keyboard.next();
+                    } finally { // TODO 16: add a finally block, and initialize the myLatte object again
+                        myLatte = new Latte(latteName, latteRoast, lattePrice, milkType, syrupFlavor);
+                    }
+
                     myLatte.grindBeans();
 
-                    // Call the brewCoffee() method on the Latte object
                     myLatte.brewCoffee();
 
-                    // Call the printInfo() method on the Latte object
                     myLatte.printInfo();
 
-                    // Call the printLatteDetails() method on the Latte object
                     myLatte.printLatteDetails();
 
                     break;

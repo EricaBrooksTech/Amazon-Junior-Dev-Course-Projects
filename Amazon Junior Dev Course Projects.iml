@@ -8,6 +8,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Vehicle Simulation Project/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Camera App/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/BMI Calculator/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SideKick WhatADriver Robot/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/The Sunshine Zoo/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

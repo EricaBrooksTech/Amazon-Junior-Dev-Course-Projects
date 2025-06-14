@@ -37,18 +37,18 @@ public class CoffeeMachine {
                     System.out.print("How many servings would you like? (a number please): ");
                     int numberOfShots = keyboard.nextInt();
 
-                    // TODO 8: declare the myEspresso object before the try block and set it to null.
+                    // declare the myEspresso object before the try block and set it to null.
                     Espresso myEspresso = null;
 
-                    // TODO 7: surround the myEspresso object with a try-catch block to handle the ArithmeticException.
+                    // surround the myEspresso object with a try-catch block to handle the ArithmeticException.
                     try {
                         myEspresso = new Espresso(espressoName, espressoRoast, espressoPrice, numberOfShots);
                     } catch (ArithmeticException e) {
-                        // TODO 9: inside the catch block, ask the user to enter number of shots and store it in numberOfShots
+                        // inside the catch block, ask the user to enter number of shots and store it in numberOfShots
                         // Ask the user for the number of shots and store it in numberOfShots
                         System.out.print("How many servings would you like? (a number please): ");
                         numberOfShots = keyboard.nextInt();
-                    } finally { // TODO 10: add a finally block, and initialize the myEspresso object again
+                    } finally { //  finally block, and initialize the myEspresso object again
                         myEspresso = new Espresso(espressoName, espressoRoast, espressoPrice, numberOfShots);
                     }
 
@@ -88,18 +88,18 @@ public class CoffeeMachine {
                         syrupFlavor = keyboard.next();
                     }
 
-                    // TODO 14: declare the myLatte object before the try block and set it to null.
+                    // myLatte object before the try block and set it to null.
                     Latte myLatte = null;
 
-                    // TODO 13: surround the myLatte object with a try-catch block to handle the IllegalArgumentException.
+                    // myLatte object with a try-catch block to handle the IllegalArgumentException.
                     try {
                         myLatte = new Latte(latteName, latteRoast, lattePrice, milkType, syrupFlavor);
                     } catch (IllegalArgumentException e) {
-                        // TODO 15: inside the catch block, ask the user to enter milkType again
+                        // inside the catch block, ask the user to enter milkType again
                         // Ask the user for the milk type and store it in milkType
                         System.out.print("What milk type would you like? (whole, skim, almond, oat): ");
                         milkType = keyboard.next();
-                    } finally { // TODO 16: add a finally block, and initialize the myLatte object again
+                    } finally { // finally block, and initialize the myLatte object again
                         myLatte = new Latte(latteName, latteRoast, lattePrice, milkType, syrupFlavor);
                     }
 
@@ -114,6 +114,7 @@ public class CoffeeMachine {
                     break;
                 case 3:
                     System.out.println("Thank you for using the Coffee Machine!");
+                    keyboard.close(); // Close scanner
                     return;
                 default:
                     System.out.println("Invalid choice. Please enter 1, 2, or 3.");

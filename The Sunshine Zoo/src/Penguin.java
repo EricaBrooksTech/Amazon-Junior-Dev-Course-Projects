@@ -1,29 +1,19 @@
-/** TODO 9 Solution is provided by creting the penguin class
- *          the todo states:
- *                          create a class "Penguin" from the "Animal" class
- *                          also implementation of the Walk and Swim interfaces
- **/
+import java.io.Serial;
+import java.io.Serializable;
 
-/** TODO 9(d) Solution is implemented by implementing the Walk and Swim interfaces
- *            and implementing their methods within the class
- **/
-public class Penguin extends Animal implements Walk, Swim{
+//Implement serializable interface for class Penguin
 
-    /** TODO 9(a) Solution: Create a property isSwimming of boolean  type to indicate
-     *                       if the penguin is swimming or walking.
-     *                       Also create properties walkSpeed and swimSpeed.
-     **/
+public class Penguin extends Animal implements Walk, Swim, Serializable {
 
+    // Unique identifier for serialization versioning
+    @Serial
+    private static final long serialVersionUID = 1L;
 
     boolean isSwimming;
     int walkSpeed;
     int swimSpeed;
 
-    /** TODO 9(a) Solution End **/
-
-
-    /** TODO 9(b) Solution: Create the setters and getters of the properties. **/
-    public boolean isSwimming() {
+public boolean isSwimming() {
         return isSwimming;
     }
 
@@ -46,22 +36,10 @@ public class Penguin extends Animal implements Walk, Swim{
     public void setSwimSpeed(int swimSpeed) {
         this.swimSpeed = swimSpeed;
     }
-    /** TODO 9(b) Solution End **/
 
-     /** TODO 9(c) Solution: Ensure that when the default constructor of the Penguin is called,
-     *                      the name of the animal Penguin is passed to the constructor of the
-     *                      parent class Animal.
-     **/
     public Penguin() {
         super("Penguin");
     }
-    /** TODO 9(c) Solution End **/
-
-
-    /** TODO 9(d) Solution: Override the eatingFood() method and implement the method
-     *                      "eatingCompleted()" of the Eat interface like the
-     *                      Dolphin class.
-     **/
 
     @Override
     public void eatingFood() {
@@ -72,11 +50,6 @@ public class Penguin extends Animal implements Walk, Swim{
     public void eatingCompleted() {
         System.out.println("Penguin: I have eaten fish.");
     }
-    /** TODO 9(d) Solution End **/
-
-
-    /** TODO 9(e) Solution: Implement both the Walk and the Swim interfaces **/
-
 
     @Override
     public void swimming() {
@@ -87,8 +60,13 @@ public class Penguin extends Animal implements Walk, Swim{
     public void walking() {
         System.out.println("Penguin: I am walking at the speed " + walkSpeed + " mph");
     }
-    /** TODO 9(e) Solution End **/
 
-
+     @Override
+    public String toString() {
+        return "Penguin{" +
+                "isSwimming=" + isSwimming +
+                ", walkSpeed=" + walkSpeed +
+                ", swimSpeed=" + swimSpeed +
+                '}';
+    }
 }
-/** TODO 9 Solution End **/

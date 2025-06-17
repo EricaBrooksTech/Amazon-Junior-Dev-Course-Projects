@@ -58,11 +58,9 @@ abstract public class Animal implements Eat {
         this.age = age;
     }
 
-    /** TODO 3 Solution **/
     @Override
     public void eatingFood() {
         System.out.println("The animal: " + nameOfAnimal + " is eating.");
     }
-    /** TODO 3 Solution End **/
 
 }
